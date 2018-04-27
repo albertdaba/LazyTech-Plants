@@ -1,0 +1,49 @@
+/* 
+Automated Plant Watering System v1.0
+by Albert Daba
+-timed intervals
+-PSU not adjusted to 220v
+-time is measured in milliseconds, adjust accordingly
+*/
+int Activate = 7;
+
+const int button = 5;
+
+  void setup()
+{
+  pinMode(button, INPUT_PULLUP); 
+  pinMode(Activate, OUTPUT);
+      digitalWrite(Activate, HIGH);
+     delay(1000);
+   digitalWrite(Activate, LOW);
+}
+
+void loop()
+{
+  if (digitalRead(button)==LOW)
+  {
+  digitalWrite(Activate, HIGH);   
+  delay(2*1000);//watering time adjust accordingly
+   digitalWrite(Activate, LOW);
+    delay(2*1000);//waiting time adjust accordingly
+      digitalWrite(Activate, HIGH);   
+  delay(2*1000);//watering time adjust accordingly
+   digitalWrite(Activate, LOW);
+    delay(2*1000);//waiting time adjust accordingly
+      digitalWrite(Activate, HIGH);   
+  delay(2*1000);//watering time adjust accordingly
+   digitalWrite(Activate, LOW);
+    delay(2*1000);//waiting time adjust accordingly
+      digitalWrite(Activate, HIGH);   
+  delay(2*1000);//watering time adjust accordingly
+   digitalWrite(Activate, LOW);
+    }
+  
+}
+
+
+
+
+
+
+
